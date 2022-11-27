@@ -1,0 +1,400 @@
+*,
+html {
+    scroll-behavior: smooth;
+}
+
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root {
+    scrollbar-color: rgb(210, 210, 210) rgb(46, 54, 69) !important;
+    scrollbar-width: thin !important;
+    --white: #fff;
+    --black: #000;
+    --darkgreen: #24572c;
+    --darkyellow: #eb922a;
+    --darkred: #9e1414;
+    --litegreen: #62c08b;
+    --dark: #242426;
+    --gray: #5e6f77;
+}
+
+::-webkit-scrollbar {
+    height: 12px;
+    width: 8px;
+    background: var(--dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: gray;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+::-webkit-scrollbar-corner {
+    background: var(--dark);
+}
+
+/*DEFAULT*/
+body {
+    margin: 0;
+    overflow-x: hidden !important;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #f7f7f7;
+}
+
+a {
+    text-decoration: none;
+}
+
+a,
+li,
+button,
+input,
+textarea,
+select {
+    outline: none !important;
+}
+
+a,
+button {
+    transition: 0.5s;
+}
+
+li {
+    list-style: none;
+}
+
+em {
+    font-style: normal;
+    color: var(--primary);
+}
+
+p {
+    line-height: 1.8em;
+    letter-spacing: 0.08em;
+    color: var(--gray);
+}
+
+fieldset {
+    border: 0;
+}
+
+.btn1,
+.btn2 {
+    display: inline-block;
+    text-align: center;
+    padding: 15px 30px;
+}
+
+.btn1 {
+    background-color: transparent;
+    border: 2px solid var(--white);
+    border-radius: 40px;
+    color: var(--white);
+}
+
+.btn1:hover {
+    background-color: var(--white);
+    color: var(--darkgreen);
+}
+
+.btn2 {
+    background-color: var(--litegreen);
+    color: var(--white);
+}
+
+.btn2:hover {
+    background-color: var(--darkgreen);
+}
+
+.title_header {
+    width: 60%;
+    text-align: center;
+    margin: auto;
+}
+
+.title_header h1 {
+    line-height: 1;
+}
+
+.title_header em {
+    color: var(--darkred);
+    font-weight: 600;
+}
+
+@media (max-width:920px) {
+    .title_header {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+/*ESTILOS PARA PÁGINA DE LOJA*/
+/*Banner*/
+.default-hero-banner {
+    width: 100%;
+    background-image: url("https://i.ibb.co/DgRMWdv/default-bg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.default-hero-banner section {
+    padding: 5rem;
+    text-align: center;
+    color: var(--white);
+    font-size: 1.6em;
+}
+
+
+
+
+/*comanda*/
+.list-section {
+    width: 100%;
+    display: flex;
+    align-items: top;
+    padding: 4rem 0;
+}
+.column-1{
+    position: fixed;
+}
+
+.list-section .left-section,
+.list-section .right-section {
+    width: 100%;
+    padding: 2rem 1rem;
+}
+
+.list-section .left-section {
+    width: 30%;
+}
+
+.list-section .left-section .column-1,
+.list-section .left-section .column-2 {
+    width: 100%;
+    margin: auto;
+    padding: 1rem;
+    background-color: #ddb91f;
+    margin-bottom: 10px;
+    padding: 1rem;
+    border-radius: 10px;
+    position: sticky;
+    top: -15%;
+    z-index: 11;
+}
+
+.list-section .left-section .column-2 {
+    top: 10%;
+    z-index: 1;
+}
+
+.list-section .left-section .column-1 a,
+.list-section .left-section .column-2 a {
+    color: var(--black);
+}
+
+.list-section .left-section .column-1 a:not(:first-child),
+.list-section .left-section .column-2 a:not(:first-child) {
+    padding: 0.5rem;
+    border-bottom: 1px solid rgba(1, 1, 1, 0.1);
+    display: block;
+}
+
+.list-section .left-section .column-1 a:hover,
+.list-section .left-section .column-2 a:hover {
+    color: var(--white);
+}
+
+.list-cards {
+    width: 100%;
+    display: flex;
+    align-items: top;
+    flex-wrap: wrap;
+
+}
+
+.list-cards .list-card {
+    width: 45%;
+    margin: 10px;
+    border: 1px solid rgba(1, 1, 1, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 0;
+    background-color: var(--white);
+    display: flex;
+    align-items: top;
+}
+
+.list-cards .list-card:nth-child(1),
+.list-cards .list-card:nth-child(2) {
+    margin-top: 0;
+}
+
+.list-cards .list-card section {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.list-cards .list-card section:nth-child(1) {
+    padding: 0.5rem 1rem;
+}
+
+.list-cards .list-card section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.list-cards .list-card section p {
+    line-height: 1.4em;
+    font-size: 13px;
+}
+
+.list-cards .list-card section .price {
+    font-size: 1.3em;
+}
+
+.list-category {
+    background-color: rgba(1, 1, 1, 0.7);
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: -100%;
+    top: 0;
+    padding: 1rem 2rem;
+    transition: 0.5s;
+}
+
+.list-category p {
+    color: var(--white);
+}
+
+.list-cards .list-card:hover .list-category {
+    left: 0%;
+}
+
+
+@media (max-width:920px) {
+    .list-section {
+        display: block;
+    }
+
+    .list-section .left-section {
+        width: 100%;
+    }
+
+    .list-section .left-section .column-1 a:not(:first-child),
+    .list-section .left-section .column-2 a:not(:first-child) {
+        padding: 0.5rem 0rem;
+        border-bottom: 0px solid rgba(1, 1, 1, 0.1);
+        display: inline-block;
+    }
+
+    .list-section .left-section .column-1 a:after,
+    .list-section .left-section .column-2 a:after {
+        content: "";
+        font-family: "FontAwesome";
+        display: inline-block;
+        margin: 0 10px;
+    }
+}
+
+@media (max-width:640px) {
+    .list-cards .list-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*FOOTER*/
+.footer {
+    background-color: var(--dark);
+    width: 100%;
+    display: flex;
+    align-items: top;
+    padding: 5rem 0;
+}
+
+.footer section {
+    padding: 1rem 2rem;
+    width: 100%;
+    vertical-align: top;
+}
+
+.footer section h3 {
+    color: var(--white);
+}
+
+.footer section a {
+    color: var(--gray);
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    margin: 15px 0;
+}
+
+.footer section a:hover {
+    color: var(--white);
+}
+
+.footer section:nth-child(2) a:before,
+.footer section:nth-child(3) a:before {
+    content: "";
+    font-family: "FontAwesome";
+    margin-right: 5px;
+    color: var(--white);
+}
+
+.footer section a span {
+    margin: 0 10px;
+}
+
+.sub-footer {
+    background-color: var(--black);
+    text-align: Center;
+    color: var(--gray);
+    padding: 1rem 0;
+}
+
+@media (max-width:1020px) {
+    .footer {
+        display: block;
+    }
+
+    .footer section {
+        padding: 1rem 1rem;
+    }
+
+    .footer section:nth-child(2),
+    .footer section:nth-child(3) {
+        width: 49%;
+        display: inline-block;
+    }
+}
+
